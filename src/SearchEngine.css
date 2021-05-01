@@ -1,0 +1,20 @@
+.SearchEngine .form-row {
+  display: flex;
+  margin-right: -10px;
+  margin-left: 10px;
+  box-sizing: border-box;
+}
+.SearchEngine .searchButton {
+  padding-right: auto;
+  margin-left: -30px;
+}
+.SearchEngine .locationButton {
+  margin-right: -20px;
+  margin-left: 20px;
+}
+.SearchEngine .iconSearch {
+  right: 0px;
+  font-size: 14px;
+  position: relative;
+  margin-top: auto;
+}

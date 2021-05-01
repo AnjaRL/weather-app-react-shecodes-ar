@@ -1,0 +1,19 @@
+.Forecast .row {
+  border: 0px solid #dadde1;
+  box-shadow: 0.8px 0.8px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.Forecast .weather-forecast-hours img {
+  display: block;
+  height: 50px;
+  margin: 0 auto;
+  width: 50px;
+}
+
+.Forecast .hour {
+  font-family: "Work Sans", sans-serif;
+  color: #0288d1;
+  font-size: 12px;
+}
