@@ -1,9 +1,11 @@
-.Forecast .row {
+.row {
   border: 0px solid #dadde1;
   box-shadow: 0.8px 0.8px 4px rgba(0, 0, 0, 0.1);
   padding: 20px;
   text-align: center;
   text-transform: uppercase;
+  max-width: 600px;
+ 
 }
 .Forecast .weather-forecast-hours img {
   display: block;

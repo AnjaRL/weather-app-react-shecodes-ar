@@ -1,12 +1,15 @@
 .Footer footer {
   color: black;
   text-align: center;
-  font-family: monospace;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
   opacity: 0.4;
+  margin: 10px 0;
 }
 .Footer a.footer {
   color: rgb(8, 184, 238);
-  font-family: monospace;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
   font-size: 14px;
   text-decoration: none;
   transition: all 150ms ease-in-out;
