@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Forecast from "./Forecast";
 import Loader from "react-loader-spinner";
+import FormattedDate from "./FormattedDate";
 import axios from "axios";
 
 import "./Weather.css";
@@ -8,11 +9,10 @@ import "./Weather.css";
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
   function handleResponse(response) {
-    console.log(response.data);
     setWeatherData({
       ready: true,
       city: response.data.name,
-      date: "Friday, March 26, 16:18",
+      date: new Date(response.data.dt * 1000),
       iconUrl: "https://ssl.gstatic.com/onebox/weather/64/sunny_s_cloudy.png",
       description: response.data.weather[0].description,
       temperature: response.data.main.temp,
@@ -30,7 +30,10 @@ export default function Weather(props) {
         <SearchEngine />
 
         <div className="city"> {weatherData.city}</div>
-        <div className="date"> 06 May 2021</div>
+        <div className="date">
+          {" "}
+          <FormattedDate date={weatherData.date} />
+        </div>
         <img
           className="current-temp-icon"
           src={weatherData.iconUrl}
