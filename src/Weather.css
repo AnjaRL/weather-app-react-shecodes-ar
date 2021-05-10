@@ -27,7 +27,7 @@
   margin-bottom: 10px;
 }
 
-.current-temp-icon {
+.Weather canvas {
   display: block;
   margin: auto;
   margin-bottom: 5px;
