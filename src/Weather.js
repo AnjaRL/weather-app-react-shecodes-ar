@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import Forecast from "./Forecast";
 import Loader from "react-loader-spinner";
 import WeatherInfo from "./WeatherInfo";
-
 import axios from "axios";
 
 import "./Weather.css";
@@ -32,7 +31,12 @@ export default function Weather(props) {
   function search() {
     const apiKey = "a257756ae2a3fd143b9b01623be675be";
     let apiUrl = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-    axios.get(apiUrl).then(handleResponse);
+    axios
+      .get(apiUrl)
+      .then(handleResponse)
+      .catch((error) => {
+        alert("Wrong city. Enter another one ! 🌎");
+      });
   }
 
   function handleSubmit(event) {
@@ -42,6 +46,18 @@ export default function Weather(props) {
 
   function handleCityChange(event) {
     setCity(event.target.value);
+  }
+  function searchCurrentPosition(position) {
+    const apiKey = "a257756ae2a3fd143b9b01623be675be";
+    let lat = position.coords.latitude;
+    let lon = position.coords.longitude;
+
+    let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
+    axios.get(apiUrl.then(handleResponse));
+  }
+  function handleCurrentLocation(event) {
+    event.preventDefault();
+    navigator.geolocation.getCurrentPosition(searchCurrentPosition);
   }
   if (weatherData.ready) {
     return (
@@ -75,6 +91,7 @@ export default function Weather(props) {
                 <button
                   type="button"
                   className="btn btn-sm btn-light shadow-sm locationButton"
+                  onClick={handleCurrentLocation}
                 >
                   <i
                     className="iconify iconSearch"

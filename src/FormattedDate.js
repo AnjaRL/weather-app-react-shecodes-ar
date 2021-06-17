@@ -22,7 +22,7 @@ export default function FormattedDate(props) {
     "Monday",
     "Tuesday",
     "Wednesday",
-    "Thrursday",
+    "Thursday",
     "Friday",
     "Saturday",
   ];
