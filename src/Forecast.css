@@ -1,7 +1,13 @@
 .row {
+  margin-top: 40px;
+  margin-bottom: 20px;
   border: 0px solid #dadde1;
-  box-shadow: 0.8px 0.8px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  background: linear-gradient(-10deg, #fdd78c 0%, #faba90 100%, #73ccd5 100%);
+  box-shadow: 20px 20px 65px #daa27d, -20px -20px 65px #ffd2a3;
+  opacity: 0.8;
   padding: 20px;
+  font-size: 14px;
   text-align: center;
   text-transform: uppercase;
   max-width: 600px;

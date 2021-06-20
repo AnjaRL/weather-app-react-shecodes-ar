@@ -1,6 +1,8 @@
 import React from "react";
 import FormattedDate from "./FormattedDate";
 import WeatherIcon from "./WeatherIcon";
+import Sunrise from "./Sunrise";
+import Sunset from "./Sunset";
 import WeatherUnits from "./WeatherUnits";
 
 export default function WeatherInfo(props) {
@@ -9,7 +11,7 @@ export default function WeatherInfo(props) {
       <div className="city"> {props.data.city}</div>
       <div className="date">
         {" "}
-        <FormattedDate date={props.data.date} />
+        <FormattedDate timezone={props.data.timezone} />
       </div>
       <div className="weatherIcon">
         <WeatherIcon code={props.data.icon} size={78} />
@@ -31,14 +33,20 @@ export default function WeatherInfo(props) {
           data-icon="carbon:sunrise"
           data-inline="false"
         ></span>
-        <span className="sunrise">06:18</span>
+        <span className="sunrise">
+          {" "}
+          <Sunrise sunrise={props.data.sunrise} />
+        </span>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <span
           className="iconify"
           data-icon="carbon:sunset"
           data-inline="false"
         ></span>
-        <span className="sunset">17:58</span>
+        <span className="sunset">
+          {" "}
+          <Sunset sunset={props.data.sunset} />
+        </span>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <span
           class="iconify"
