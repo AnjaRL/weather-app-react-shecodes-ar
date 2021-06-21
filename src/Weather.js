@@ -65,7 +65,7 @@ export default function Weather(props) {
         <div className="SearchEngine">
           <form onSubmit={handleSubmit}>
             <div className="form-row align-items-center">
-              <div className="col-7">
+              <div className="col-9">
                 <input
                   type="search"
                   className="form-control form-control-sm shadow-sm border-0"

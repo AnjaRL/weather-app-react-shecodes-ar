@@ -14,7 +14,7 @@ export default function WeatherInfo(props) {
         <FormattedDate timezone={props.data.timezone} />
       </div>
       <div className="weatherIcon">
-        <WeatherIcon code={props.data.icon} size={78} />
+        <WeatherIcon code={props.data.icon} size={100} />
       </div>
       <div className=" description"> {props.data.description} </div>
 
