@@ -49,11 +49,9 @@ export default function Weather(props) {
   }
   function searchCurrentPosition(position) {
     const apiKey = "a257756ae2a3fd143b9b01623be675be";
-    let lat = position.coords.latitude;
-    let lon = position.coords.longitude;
 
-    let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
-    axios.get(apiUrl.then(handleResponse));
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
+    axios.get(apiUrl).then(handleResponse);
   }
   function handleCurrentLocation(event) {
     event.preventDefault();
